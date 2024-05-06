@@ -1,603 +1,373 @@
-body {
-    background-color: #f2f2f2;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
-/*------------------------------------------------NAVBAR----------------------------------------*/
-.nav
-{
-    background-color: rgba(0, 0, 0, 0.856);
-    z-index: 9;
-    padding-left: 50px;
-    padding-right: 50px;
-    display:flex;
-    box-shadow: 0px 3px 65px 0px rgba(0, 0, 0, 0.856);
-}
-.nav_top
-{
-    position:fixed;
-    top:0;
-    right:0;
-    left:0;
-}
-.logo
-{
-    float:left;
-    width: 50%;
-}
-.logo img
-{
-    padding: 8px;
-    width:30%;
-    margin-left:10%;
-}
-.nav_side
-{
-    float:right;
-    width:45%;
-    margin-top: 20px;
-}
-.nav_side a
-{
-    text-decoration: none;
-    margin-right: 10px;
-    margin-left:50px;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-left: 15px;
-    color: white;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    
-}
-.nav_side a:hover
-{
-    color: rgb(79, 255, 88);
-    transition: all 1s ease;
+/* Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*------------------------------------------------MAIN----------------------------------------*/
-.main
-{
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f5f0;
+}
+
+/* Color Variables */
+:root {
+    --primary-color: #6b5c3d; /* Dark beige */
+    --secondary-color: #3d5012; /* Dark olive green */
+    --accent-color: #9c6e44; /* Burnt orange */
+    --text-color: #333; /* Dark gray */
+    --background-color: #f9f5f0; /* Soft beige */
+    --header-color: #392d1a; /* Dark brown */
+    --footer-color: #392d1a; /* Dark brown */
+}
+
+/* Navigation */
+nav {
+    background-color: var(--header-color);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
     background-image: url("images/back.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 130vh;
-}
-.main .main_content
-{
-    padding-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    width:40%;
-}
-.main .main_content h2
-{
-    color: white;
-    font-size: 350%;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
-    text-align: left;
-}
-.main .main_content h2 span
-{
-    font-size:50%;
-    opacity: 0.9;
-    font-weight: 400;
-    line-height: 50px;
-}
-.main .main_content .btn
-{
-    margin-top:10%;
-    text-align: left;
-    width:0%;
-}
-.main .main_content .btn a
-{
-    text-decoration: none;
-    font-size: large;
-    margin:44%;
-    padding: 10px 20px;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.856);
-    color:white;
-    font-family: 'Trebuchet MS', sans-serif; 
-    text-align: center;
-    border: 2px solid rgba(0, 0, 0, 0.856);
-    transition: 0.5s;
-}
-.main .main_content .btn a:hover
-{
-    background-color: rgba(255, 255, 255, 0.527);
-    color: rgb(37, 0, 19);
-    border: none;
-    border: 4px solid rgb(37, 0, 19);
-    transition:0.5s;
-}
-/*------------------------------------------------SIDE----------------------------------------*/
-.side 
-{
-    background-color: rgba(0, 0, 0, 0.966);
+    height: 500px;
     display: flex;
-    text-align: center;
-    color: white;
-    font-family: 'Trebuchet MS', sans-serif;
-}
-.side .left
-{
-    width:50%;
-    float: left;
-}
-.side .left img
-{
-    float: left;
-    width:100%;
-}
-.side .right
-{
-    background-color: rgba(0, 0, 0, 0.966);
-    width:50%;
-    float:right;
-}
-.side .right h2
-{
-    margin-top: 8%;
-    font-size: 250%;
-}
-.side .right p
-{
-    margin-left: 15%;
-    width: 70%;
-    font-size: 147%;
-    margin-top: 6%;
-}
-.side .right .side_btn
-{
-    margin-top:4%;
-}
-.side .right .side_btn a
-{
-    text-decoration: none;
-    font-size: large;
-    margin:32%;
-    padding: 10px 20px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Trebuchet MS', sans-serif;
-    text-align: center;
-    border: 4px double whitesmoke;
-    transition: 0.5s;
-}
-.side .right .side_btn a:hover
-{
-    background-color: rgb(79, 255, 88);
-    color: black;
-    font-weight:bolder;
-    border: none;
-    border: 4px solid green;
-    transition:0.5s;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-/*--------------------------------------------HOW WE HELP----------------------------------------*/
-.product
-{
-    float:left;
-    background-image: url("images/poor.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-bottom: 50px;
-    height: 100vh;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.product h2
-{
-    font-size: 45px;
+
+.hero-content {
     text-align: center;
+    color: #fff;
+    max-width: 800px;
     padding: 20px;
-}
-.product .product_container
-{
-    display:flex;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.product .product_container .item
-{
-    width:33%;
-    margin: 10px;
-    height: 10%;
-    background-color: black;
-    opacity: 80%;
-    border-radius: 50%;
-}
-.product .product_container .item:hover
-{
-    box-shadow:0px 3px 65px 0px rgb(255, 189, 165);
-}
-.product .product_container .item .item_img
-{
-    width:60%;
-    height: 20%;
-    overflow:hidden;
-    margin-left: 23%;
-}
-.product .product_container .item .item_img img
-{
-    width:100%;
-    height: 10%;
-}
-.product .product_container .item .item_content
-{
-    text-align: center;
-}
-.product .product_container .item .item_content h3
-{
-    font-size: 25px;
-    line-height: 2px;
-    color: rgb(79, 255, 88);
-    font-weight: bolder;
-}
-.product .product_container .item .item_content p
-{
-    font-size: 20px;
-    line-height: 25px;
-    width: 80%;
-    text-align: center;
-    padding-left: 20%;
-}
-/*--------------------------------------------FOOTER----------------------------------------*/
-footer
-{
-    background-color: black;
-    padding:50px;
-    display: inline-block;
-    font-family: 'Trebuchet MS', sans-serif;
-}
-footer .aimg
-{
-    margin-top:21%;
-}
-footer .pages
-{
-    width:25%;
-    text-align: center;
-    display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
-footer .pages p
-{
-    padding-top: 5%;
-    text-align: left;
-    color:rgba(255, 226, 243, 0.808);
-    width:90%;
-    padding-left:12%;
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
-footer .pages a
-{
-    text-decoration: none;
-    margin:10px;
-    color: rgba(255, 226, 243, 0.808);
-    font-size: 30px;
-}
-footer .pages a:hover
-{
-    color:white;
-}
-footer .doc
-{
-    width:25%;
-    text-align: center;
+
+.btn {
     display: inline-block;
-    padding-bottom: 5%;
-}
-footer .doc h3
-{
-    color: rgb(255, 226, 243);
-    font-size: 30px;
-    padding: 5px;
-    font-weight: bold;
-    line-height: 130px;
-}
-footer .doc a
-{
-    display: block;
-    text-decoration: none;
-    margin:10px;
-    color: rgba(255, 226, 243, 0.808);
-    font-size: 25px;
-}
-footer .doc a:hover
-{
-    color:white;
-}
-footer .social
-{
-    width:25%;
-    text-align: center;
-    display: inline-block;
-}
-footer .social h3
-{
-    color: rgb(255, 226, 243);
-    font-size: 30px;
-    padding: 5px;
-    font-weight: bold;
-    line-height: 130px;
-}
-footer .contact
-{
-    width:20%;
-    text-align: center;
-    text-align: left;
-}
-footer .contact h3
-{
-    color: rgb(255, 226, 243);
-    font-size: 30px;
-    padding: 5px;
-    font-weight: bold;
-    line-height: 130px;
-}
-footer .social p
-{
-    padding-top: 5%;
-    text-align: left;
-    color:rgba(255, 226, 243, 0.808);
-    width:90%;
-    padding-left:12%;
-    font-size: large;
-    margin-bottom: 18%;
-}
-.side .right .side_btn
-{
-    margin-top:4%;
-}
-footer .side_btn a
-{
-    text-decoration: none;
-    font-size: 100%;
     padding: 10px 20px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Trebuchet MS', sans-serif;
-    border: 2px double whitesmoke;
-    transition: 0.5s;
-}
-footer .side_btn a:hover
-{
-    background-color: rgb(79, 255, 88);
-    color: black;
-    font-weight:bolder;
-    border: none;
-    border: 4px solid green;
-    transition:0.5s;
-}
-footer .contact
-{
-    display: inline-block;
-}
-footer .contact a
-{
-    display: block;
-    font-size: 20px;
-    line-height: 38px;
-    text-decoration: none;;
-    color:rgba(247, 193, 224, 0.904);
-    margin:10px;
-}
-footer .contact a:hover
-{
-    color:white;
-}
-footer p
-{
-    color:rgba(247, 178, 217, 0.726);
-    text-align: center;
-    font-size: 110%;
-}
-/*------------------------------------------------MAIN_ABOUT----------------------------------------*/
-.main_about
-{
-    font-family: 'Trebuchet MS', sans-serif;
-    background-image: url("images/about.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 80vh;
-    margin-top:-1.5%;
-}
-.main_about .main_content_about h2
-{
-    color: white;
-    font-size: 390%;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    padding:20%;
-}
-.product_about
-{
-    float:left;
-    background-image: url("images/about_back.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-bottom: 50px;
-    height: 100vh;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
-}
-/*--------------------------------------------DONATE----------------------------------------*/
-.donate
-{
-    font-family: 'Trebuchet MS', sans-serif;
-    background-image: url("images/donate_back.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    margin-top:-1.5%;
-    color: white;
-    text-align: center;
-}
-.donate .donate_container
-{
-    background-color: black;
-    opacity:80%;
-    text-align: center;
-    margin: 0% 20% 0% 20%;
-    padding-top:10%;
-    padding-bottom: 10%;
-}
-.donate .donate_container h1
-{
-    color: rgb(79, 255, 88);
-    line-height: 100px;
-}
-.donate .donate_container p
-{
-    font-size: large;
-    width:80%;
-    text-align: center;
-    padding-left:20%;
-}
-.donate .donate_container .second
-{
-    padding-bottom: 10%;
-}
-.donate .side_btn a
-{
+    background-color: #9c6e44; /* Button background color */
+    color: #fff; /* Button text color */
     text-decoration: none;
-    font-size: 120%;
-    padding: 10px 20px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Trebuchet MS', sans-serif;
-    border: 2px double whitesmoke;
-    transition: 0.5s;
-}
-.donate .side_btn a:hover
-{
-    background-color: white;
-    color: black;
-    font-weight:bolder;
     border: none;
-    border: 4px solid green;
-    transition:0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
 }
-/*--------------------------------------------CONTACT---------------------------------------*/
-.contact_container
-{
-    padding: 100px;
-    font-family: 'Trebuchet MS', sans-serif;
-    background-image: url("images/about_back.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 180vh;
-    margin-top:-1.5%;
-    color: white;
+
+.btn:hover {
+    background-color: #9c6e44; /* Button background color on hover */
 }
-.contact_container h2
-{
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-    font-size: 33px;
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--accent-color);
+}
+
+/* Programs Section */
+.programs {
+    background-color: var(--background-color);
+    padding: 50px;
     text-align: center;
-    font-family: 'Trebuchet MS', sans-serif;
 }
-.contact_container .g_map
-{
-    border:10px solid white;
+
+.programs h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
 }
-.contact_container .contact_content
-{
-    padding:20px;
-    font-family: 'Trebuchet MS', sans-serif;
+
+/* Card container */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px; /* Add space around each card */
+    width: 300px; /* Set a fixed width for consistency */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
 }
-.contact_container .contact_content p
-{
-    padding:15px;
+
+/* Card title */
+.card h3 {
     font-size: 20px;
-    line-height: 25px;
+    margin-bottom: 10px;
 }
-/*--------------------------------------------CATERING---------------------------------------*/
-@media only screen and (max-width: 768px) {
-    .nav {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-    .nav_top {
-        padding: 10px 15px; /* Adjust top padding */
-    }
-    .logo img {
-        width: 50%; /* Make logo bigger on smaller screens */
-    }
-    .nav_side {
-        display: none; /* Hide side navigation by default on smaller screens */
-    }
-    .nav_top .toggle-btn {
-        display: block; /* Show toggle button */
-        float: right;
-        cursor: pointer;
-        color: white;
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .nav_side.open {
-        display: flex; /* Show side navigation when open */
+
+/* Card image */
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Card content */
+.card p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Change box-shadow on hover */
+    background-color: #f8f8f8; /* Change background color on hover */
+    border-color: #cccccc; 
+}
+
+.program-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid var(--primary-color);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.item p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-color);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid var(--accent-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.footer-section nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-section nav a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--accent-color);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.856);
-        width: 100%;
-        z-index: 10;
-    }
-    .nav_side.open a {
-        margin: 10px 0;
-    }
-    .main {
         padding: 20px;
-        /* Your styles for main content */
     }
 
-    .main .main_content {
-        width: 80%; /* Adjust width of main content */
-        margin: 10% auto; /* Center align main content */
+    .about-content,
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
-    .main .main_content .btn a {
-        margin: 10% auto; /* Center align buttons */
+
+    .program-cards {
+        flex-direction: column;
+        align-items: center;
     }
-    .side {
-        flex-direction: column; /* Stack side elements vertically */
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
     }
-    .side .left,
-    .side .right {
-        width: 100%; /* Full width for side elements */
+
+    .footer-section {
+        text-align: center;
     }
-    .product .product_container {
-        flex-wrap: wrap; /* Allow product items to wrap */
+
+    .item_content {
+        padding: 10px;
     }
-    .product .product_container .item {
-        width: 100%; /* Full width for product items */
+
+    /* CONTACT styles */
+   
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align items to the top */
+        margin-top: 50px;
     }
-    footer .pages,
-    footer .doc,
-    footer .social,
-    footer .contact {
-        width: 100%; /* Full width for footer sections */
+    
+    .contact-map,
+    .contact-form {
+        flex: 1; /* Make both map and form take equal width */
+        margin: 0 10px; /* Add some space between map and form */
     }
+    
+    .contact-form {
+        max-width: 400px; /* Set a maximum width for the form */
+    }
+    
+    .contact-form h2 {
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+    }
+    
+    label span {
+        color: red;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+    
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .contact-map,
+        .contact-form {
+            width: calc(100% - 20px); /* Adjust width for full width */
+            margin: 0; /* Remove margins for full width */
+        }
+    }
+    
 }
